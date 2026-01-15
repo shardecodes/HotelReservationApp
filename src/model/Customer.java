@@ -41,14 +41,15 @@ public class Customer {
     }
 
     public static boolean isValidEmail(String email) {
+
         return email != null && email.matches(EMAIL_REGEX);
     }
     @Override
     public String toString() {
         return "Customer{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", email='" + getEmail() + '\'' +
                 '}';
     }
 }
