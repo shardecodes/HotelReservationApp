@@ -3,7 +3,6 @@ package api;
 import model.Customer;
 import model.IRoom;
 import model.Reservation;
-import service.ReservationService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -141,7 +140,7 @@ public class MainMenu {
         System.out.print("Enter your last name: ");
         String lastName = scanner.nextLine();
 
-        hotelResource.createACustomer(firstName, lastName,email);
+        hotelResource.createACustomer(email,firstName, lastName);
         System.out.println("Account successfully created for " + firstName + " " + lastName);
     }
 }
